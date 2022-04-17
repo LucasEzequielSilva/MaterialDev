@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+.MuiAppBar-root {
+  height: 99.95vh !important;
+  background: linear-gradient(      195deg,      rgba(66, 66, 74, 0.5),      rgba(25, 25, 25, 0.5)    )    center center / cover !important;
+  color: #363636;
+  box-shadow: none !important;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.bkg {
+  position: absolute;
+  height: 99.95vh !important;
+  z-index: -1;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  box-shadow: none !important;
+}
+.call-to-action {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: auto;
+}
+.call-to-action h1{
+    font-family: 'Roboto Slab', serif;
+}
+.first-boton{
+    box-shadow: none!important;
+    -webkit-tap-highlight-color: transparent!important;
+    background-color: rgb(255, 255, 255)!important;
+    color: rgb(52, 71, 103)!important;
+    transition: all 500ms ease-in 0s!important;
+    -webkit-transition: all 500ms ease-in 0s!important;
+    -moz-transition: all 500ms ease-in 0s!important;
+    -ms-transition: all 500ms ease-in 0s!important;
+    -o-transition: all 500ms ease-in 0s!important;
+}
+.first-boton:hover{
+    filter: drop-shadow(0 2mm 0.90rem rgba(255, 255, 255, 0.213));
+    -webkit-filter: drop-shadow(0 2mm 0.90rem rgba(255, 255, 255, 0.213));
+}
+.icon{
+  transition: all 200ms ease-in 0s!important;
+  -webkit-transition: all 200ms ease-in 0s!important;
+  -moz-transition: all 200ms ease-in 0s!important;
+  -ms-transition: all 200ms ease-in 0s!important;
+  -o-transition: all 200ms ease-in 0s!important;
+}
+.icon:hover{
+  filter: drop-shadow(0 0 0.30rem rgb(255, 255, 255));
+  -webkit-filter: drop-shadow(0 0 0.30rem rgb(255, 255, 255));
+}

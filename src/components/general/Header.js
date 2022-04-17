@@ -6,13 +6,22 @@ import { Link, Grid, Stack, MenuItem, Tooltip, Button, Avatar, Container, CardMe
 import '../../styles/header.css';
 import bgImage from '../../assets/images/background.jpg'
 import emoji from '../../assets/emojis/man-tech.png'
-import { ThemeProvider, createTheme, makeStyles } from '@mui/material/styles/'
+import { ThemeProvider, createTheme } from '@mui/material/styles/'
+import { styled } from '@mui/system';
+import CodeIcon from '@mui/icons-material/Code';
 
 const pages = ['Courses', 'Bootcamps', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-
 const Header = () => {
+
+    const Logo = styled('div')({
+        fontSize: "2rem",
+        background: "#fff",
+        boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;",
+        backdropFilter: "blur(1rem)",
+        color: '#fff'
+    });
 
     const theme = createTheme({
         palette: {
@@ -28,22 +37,22 @@ const Header = () => {
     });
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+/*     const [anchorElUser, setAnchorElUser] = React.useState(null);
+ */
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
-    const handleOpenUserMenu = (event) => {
+/*     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
-    };
+    }; */
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
-    const handleCloseUserMenu = () => {
+/*     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
-    };
+    }; */
 
     return (
         <ThemeProvider theme={theme}>
@@ -51,28 +60,32 @@ const Header = () => {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         {/* LOGO */}
-                        <Typography
-                            variant="h3"
+                        <Logo
                             noWrap
-                            component="div"
-                            sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontFamily: 'Roboto Slab', p: 1, borderRadius: 4, boxShadow: 1 }}
+                            sx={{ display: { xs: 'none', md: 'flex' }, fontFamily: 'Roboto Slab', borderRadius: 4, height: 40, width: 40 }}
                             color="primary"
                         >
-                            M
-                        </Typography>
+                            <CodeIcon sx={{ width: 25, height: 25, m: "auto" }} className='iconLogo'/>
+                        </Logo>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                            <IconButton
+                            <Logo
+                            noWrap
+                            sx={{ display: { xs: 'flex', md: 'flex' }, fontFamily: 'Roboto Slab', borderRadius: 2, height: 30, width: 30 }}
+                            color="primary">
+                            <CodeIcon sx={{ width: 20, height: 20, m: "auto" }}
                                 size="large"
                                 aria-label="account of current user"
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
                                 onClick={handleOpenNavMenu}
                                 color="inherit"
+                                className='iconLogo'
                             >
-                            </IconButton>
+                            </CodeIcon>
+                            </Logo>
                             <Menu
-                                id="menu-appbar"
+                                id="basic-menu"
                                 anchorEl={anchorElNav}
                                 anchorOrigin={{
                                     vertical: 'bottom',
@@ -88,6 +101,9 @@ const Header = () => {
                                 sx={{
                                     display: { xs: 'block', md: 'none' },
                                 }}
+                                MenuListProps={{
+                                    'aria-labelledby': 'basic-button',
+                                  }}
                             >
                                 {/* NAVIGATION */}
                                 {pages.map((page) => (
@@ -96,15 +112,9 @@ const Header = () => {
                                     </MenuItem>
                                 ))}
                             </Menu>
+                            
                         </Box>
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            component="div"
-                            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-                        >
-                            LOGO
-                        </Typography>
+                    
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center" }}>
                             {pages.map((page) => (
                                 <Button
@@ -148,13 +158,13 @@ const Header = () => {
                                 variant="h2"
                                 component="h1"
                                 color="white"
-                            >
-                                Material Dev
+                                className='material'
+                            >Material Dev
+                            <CardMedia sx={{ width: "75px", height: "75px", ml: 2, md: 2, }} image={emoji} title="emoji" component="img" src="img" className='emoji' />
                             </Typography>
-                            <CardMedia sx={{ width: "75px", height: "75px", ml: 2, md: 2 }} image={emoji} title="emoji" component="img" src="img" />
                         </Box>
                         <Typography variant="body1" color="white" opacity={0.8} pr={6} mr={6}>
-                            The time has come for it to be okay to progress in the tech industry. People in this world avoid the big step out of fear.
+                        Take off your career in technology 🚀. Study remotely and intensively. And the best? You only pay us when you get a new job.
                         </Typography>
                         {/*BOTONES CALL TO ACTION  */}
                         <Stack spacing={1} direction="row" mt={3}>

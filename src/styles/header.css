@@ -43,7 +43,7 @@
     box-shadow: none!important;
     -webkit-tap-highlight-color: transparent!important;
     background-color: rgb(255, 255, 255)!important;
-    color: rgb(52, 71, 103)!important;
+    color: #007bf7!important;
     transition: all 500ms ease-in 0s!important;
     -webkit-transition: all 500ms ease-in 0s!important;
     -moz-transition: all 500ms ease-in 0s!important;
@@ -64,4 +64,29 @@
 .icon:hover{
   filter: drop-shadow(0 0 0.30rem rgb(255, 255, 255));
   -webkit-filter: drop-shadow(0 0 0.30rem rgb(255, 255, 255));
+}
+.emoji{
+  pointer-events: none;
+}
+.iconLogo{
+  color: #007bf7!important;
+}
+.material{
+  -webkit-text-fill-color: transparent;
+  background: text rgb(51, 153, 255);
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: text;
+  background-color: rgb(51, 153, 255);
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  align-content: stretch;
 }
